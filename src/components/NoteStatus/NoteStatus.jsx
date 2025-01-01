@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import Message from "../Message/Message";
 
 function NoteStatus({ notes }) {
     const allNotes = notes.length;
     const completedNotes = notes.filter((note) => note.completed).length;
     const unCompletedNotes = notes.filter((note) => !note.completed).length;
-    if(!allNotes) return <h2>No Notes has already been added.</h2>
+    if (!allNotes) return <Message><h2>🤷‍♂️No Notes has already been added.</h2></Message>
     return (
         <ul className='note-status'>
             <li>
