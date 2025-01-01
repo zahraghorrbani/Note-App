@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react"
+import { useState } from "react";
 
 function AddNewNote({ onAddNote }) {
     const [title, setTitle] = useState("");
@@ -15,7 +15,7 @@ function AddNewNote({ onAddNote }) {
             description,
             id: Date.now(),
             completed: false,
-            createAt: new Date().toISOString()
+            createdAt: new Date().toISOString(),
         }
         onAddNote(newNote);
         setTitle("");
